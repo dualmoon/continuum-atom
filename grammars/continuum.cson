@@ -1,0 +1,68 @@
+'scopeName': 'text.continuum'
+'name': 'Continuum'
+'fileTypes': [
+  'txt'
+]
+'patterns': [
+  { #Match lines that begin with text up to a colon
+    #This is akin to labels
+    'match': '^.+:'
+    'name': 'string.quoted.double.continuum'
+  }
+  { #Match PSA ticket numbers
+    'match': '\\bT[0-9]{8}\.[0-9]{4}'
+    'name': 'constant.language.ticket-psa.continuum'
+  }
+  { #Match Continuum ticket numbers
+    'match': '\\b([0-9]{8})([0-9]{7})\\b'
+    'name': 'constant.language.ticket-num.continuum'
+  }
+  { #Match NETBIOS names, attempt to not catch abbreviations
+    'match': '\\b[A-Z][A-Z0-9]{3}[A-Z0-9]+(?:-[A-Z0-9]*)*\\b'
+    'name': 'constant.language.netbios.continuum'
+  }
+  { #Capture "[asdf]" as a comment
+    'begin': '\\['
+    'beginCaptures':
+      '0':
+        'name': 'comment.block.continuum'
+    'end': '\\]'
+    'name': 'comment.block.brackets.continuum'
+  }
+  { #Capture n/a as comments
+    'match': '\\bn/a\\b'
+    'name': 'comment.line.continuum'
+  }
+  { #Match 10 digit phone numbers w/extensions
+    'captures':
+      '1':
+        'name': 'constant.numeric.phone-number.area-code.continuum'
+      '2':
+        'name': 'constant.numeric.phone-number.first.continuum'
+      '3':
+        'name': 'constant.numeric.phone-number.last.continuum'
+      '4':
+        'name': 'constant.numeric.phone-number.extension.continuum'
+    'match': '\\b([2-9][0-9]{2})([0-9]{3})([0-9]{4})(?:x([0-9]+))?\\b',
+  }
+  { #Match numbers
+    'match': '\\b([0-9]+)\\b'
+    'name': 'constant.numeric.integer.decimal.continuum'
+  }
+  { #Match ticket numbers
+    'match': '\\bT[0-9]{8}\.[0-9]{4}'
+    'name': 'constant.language.unfiled.continuum'
+  }
+  { #Match time in NNam/NNpm format
+    'match': '\\b[1-9]+[0-2]*[pa]m\\b'
+    'name': 'constant.numeric.integer.decimal.timehrap.continuum'
+  }
+  { #Match normal ticket lines
+    'captures':
+      '1':
+        'name': 'constant.numeric.signifier.continuum'
+      '2':
+        'name': 'string.quoted.single.continuum'
+    'match': '^([-+=])(.*)'
+  }
+]
