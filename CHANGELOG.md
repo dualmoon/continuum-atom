@@ -1,3 +1,6 @@
+## 0.0.10 - The great renamifying
+* Renamed a bunch of files to be more uniform
+
 ## 0.0.9
 * Restructured some grammars
 
