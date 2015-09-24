@@ -1,3 +1,6 @@
+## 0.0.7
+* Add setting default to turn on soft wrap
+
 ## 0.0.6
 * Fix incorrect regexp in grammar
 * Add configuration to ignore other buffers for autocomplete
