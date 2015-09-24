@@ -1,8 +1,8 @@
-AtomContinuumView = require './continuum-atom-view'
+ContinuumAtomView = require './continuum-atom-view'
 {CompositeDisposable} = require 'atom'
 
-module.exports = AtomContinuum =
-  atomContinuumView: null
+module.exports = ContinuumAtom =
+  ContinuumAtomView: null
   modalPanel: null
   subscriptions: null
 
@@ -11,9 +11,10 @@ module.exports = AtomContinuum =
       type: 'boolean'
       default: false
 
+
   activate: (state) ->
-    @atomContinuumView = new AtomContinuumView(state.atomContinuumViewState)
-    @modalPanel = atom.workspace.addModalPanel(item: @atomContinuumView.getElement(), visible: false)
+    @ContinuumAtomView = new ContinuumAtomView(state.ContinuumAtomViewState)
+    @modalPanel = atom.workspace.addModalPanel(item: @ContinuumAtomView.getElement(), visible: false)
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
@@ -24,13 +25,13 @@ module.exports = AtomContinuum =
   deactivate: ->
     @modalPanel.destroy()
     @subscriptions.dispose()
-    @atomContinuumView.destroy()
+    @ContinuumAtomView.destroy()
 
   serialize: ->
-    atomContinuumViewState: @atomContinuumView.serialize()
+    ContinuumAtomViewState: @ContinuumAtomView.serialize()
 
   toggle: ->
-    console.log 'AtomContinuum was toggled!'
+    console.log 'ContinuumAtom was toggled!'
 
     if @modalPanel.isVisible()
       @modalPanel.hide()
