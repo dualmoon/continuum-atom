@@ -4,10 +4,20 @@
   'txt'
 ]
 'patterns': [
+  { #Match normal ticket lines
+    'captures':
+      '1':
+        'name': 'constant.numeric.signifier.continuum'
+      '2':
+        'name': 'string.quoted.single.continuum'
+    'match': '^([-+=])(.*)'
+  }
   { #Match lines that begin with text up to a colon
-    #This is akin to labels
-    'match': '^.+:'
-    'name': 'string.quoted.double.continuum'
+    #This is for lines from templates
+    'captures':
+      '1': 'string.quoted.double.continuum'
+      '2': 'string.quoted.single.continuum'
+    'match': '^[^-=+](.+:)(.*)'
   }
   { #Match PSA ticket numbers
     'match': '\\bT[0-9]{8}\.[0-9]{4}'
@@ -18,7 +28,7 @@
     'name': 'constant.language.ticket-num.continuum'
   }
   { #Match NETBIOS names, attempt to not catch abbreviations
-    'match': '\\b[A-Z][A-Z0-9]{3}[A-Z0-9]+(?:-[A-Z0-9]*)*\\b'
+    'match': '\\b[A-Z][-A-Z0-9]{4}[-A-Z0-9]*\\b'
     'name': 'constant.language.netbios.continuum'
   }
   { #Capture "[asdf]" as a comment
@@ -56,13 +66,5 @@
   { #Match time in NNam/NNpm format
     'match': '\\b[1-9]+[0-2]*[pa]m\\b'
     'name': 'constant.numeric.integer.decimal.timehrap.continuum'
-  }
-  { #Match normal ticket lines
-    'captures':
-      '1':
-        'name': 'constant.numeric.signifier.continuum'
-      '2':
-        'name': 'string.quoted.single.continuum'
-    'match': '^([-+=])(.*)'
   }
 ]

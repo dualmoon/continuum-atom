@@ -29,3 +29,19 @@
       	• Tier 4 Ticket number: $5
       	• Escalation Reason: $6
       """
+  't3 performance malware virus scan':
+    'prefix': 't3scan'
+    'body': """
+      - Please perform full Anti-Virus scan
+      - Please perform MalwareBytes Threat scan
+      - Please perform CCleaner scan and clean up
+      - Please perform HitmanPro scan
+      - Please perform RogueKiller scan
+      - Please perform ADWCleaner scan
+      - Please perform Webroot scan
+      - Please open command prompt and run "sfc /scannow"
+      - Please perform Disk Cleanup
+      - Please perform Disk Defragmenter scan
+      - Please check hard drive SMART status with Disk Checkup
+      - Please open MSConfig and disable unneeded applications
+    """
