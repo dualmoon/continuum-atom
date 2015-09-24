@@ -48,11 +48,18 @@
   'team lead escalation stamp':
     'prefix': 'tlstamp'
     'body': """
-      Reviewer:
+      Reviewer: $1
 
-      Approved?
+      Approved? $2
 
-      Have you verified all resources have been checked?
+      Have you verified all resources have been checked? $3
 
-      Reason/Explanation:
+      Reason/Explanation: $4
+    """
+  'no contact email':
+    'prefix': 'nce'
+    'body': """
+      Hello ${1:username},
+
+      We received a request/notification that you are experiencing ${2:issue} with ${3:issue}. Unfortunately, we have been unable to reach you by phone. If you're still having trouble with this issue, please call us back at ${4:number} at your earliest convenience. If the issue has been resolved, no action is required, and the ticket will automatically close on the next business day.
     """

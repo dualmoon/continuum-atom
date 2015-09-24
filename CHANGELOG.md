@@ -1,3 +1,7 @@
+## 0.0.5
+* Add tab stops to Team Lead stamp snippet
+* Add no-contact email snippet with tab stops
+
 ## 0.0.4
 * Add Team Lead stamp snippet
 
