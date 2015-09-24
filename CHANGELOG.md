@@ -1,3 +1,6 @@
+## 0.0.4
+* Add Team Lead stamp snippet
+
 ## 0.0.3
 * Add T3 performance scan snippet
 * Update grammar rules to be more specific

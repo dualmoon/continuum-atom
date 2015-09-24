@@ -45,3 +45,14 @@
       - Please check hard drive SMART status with Disk Checkup
       - Please open MSConfig and disable unneeded applications
     """
+  'team lead escalation stamp':
+    'prefix': 'tlstamp'
+    'body': """
+      Reviewer:
+
+      Approved?
+
+      Have you verified all resources have been checked?
+
+      Reason/Explanation:
+    """
