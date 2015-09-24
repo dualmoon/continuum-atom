@@ -1,3 +1,6 @@
+## 0.0.8
+* Add grammar rule to match divider lines
+
 ## 0.0.7
 * Add setting default to turn on soft wrap
 

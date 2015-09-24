@@ -4,6 +4,10 @@
   'txt'
 ]
 'patterns': [
+  { #Match divider lines made of dashes or equals
+    'match': '^[-=]{2}[-=]+$'
+    'name': 'constant.language.divider.continuum'
+  }
   { #Match normal ticket lines
     'captures':
       '1':
