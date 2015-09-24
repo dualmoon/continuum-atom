@@ -1,3 +1,6 @@
+## 0.0.9
+* Restructured some grammars
+
 ## 0.0.8
 * Add grammar rule to match divider lines
 

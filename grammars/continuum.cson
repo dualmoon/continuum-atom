@@ -4,27 +4,6 @@
   'txt'
 ]
 'patterns': [
-  { #Match divider lines made of dashes or equals
-    'match': '^[-=]{2}[-=]+$'
-    'name': 'constant.language.divider.continuum'
-  }
-  { #Match normal ticket lines
-    'captures':
-      '1':
-        'name': 'constant.numeric.signifier.continuum'
-      '2':
-        'name': 'string.quoted.single.continuum'
-    'match': '^([-+=])(.*)'
-  }
-  { #Match lines that begin with text up to a colon
-    #This is for lines from templates
-    'captures':
-      '1':
-        'name': 'string.quoted.double.continuum'
-      '2':
-        'name': 'none'
-    'match': '^([^-=+].+:)(.*)'
-  }
   { #Match PSA ticket numbers
     'match': '\\bT[0-9]{8}\.[0-9]{4}'
     'name': 'constant.language.ticket-psa.continuum'
@@ -72,5 +51,26 @@
   { #Match time in NNam/NNpm format
     'match': '\\b[1-9]+[0-2]*[pa]m\\b'
     'name': 'constant.numeric.integer.decimal.timehrap.continuum'
+  }
+  { #Match divider lines made of dashes or equals
+    'match': '^[-=]{2}[-=]+$'
+    'name': 'constant.language.divider.continuum'
+  }
+  { #Match normal ticket lines
+    'captures':
+      '1':
+        'name': 'constant.numeric.signifier.continuum'
+      '2':
+        'name': 'string.quoted.single.continuum'
+    'match': '^([-+=])(.*)'
+  }
+  { #Match lines that begin with text up to a colon
+    #This is for lines from templates
+    'captures':
+      '1':
+        'name': 'string.quoted.double.continuum'
+      '2':
+        'name': 'none'
+    'match': '^([^-=+].+:)(.*)'
   }
 ]
