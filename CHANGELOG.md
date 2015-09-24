@@ -1,3 +1,7 @@
+## 0.0.6
+* Fix incorrect regexp in grammar
+* Add configuration to ignore other buffers for autocomplete
+
 ## 0.0.5
 * Add tab stops to Team Lead stamp snippet
 * Add no-contact email snippet with tab stops

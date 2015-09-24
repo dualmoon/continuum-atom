@@ -15,9 +15,11 @@
   { #Match lines that begin with text up to a colon
     #This is for lines from templates
     'captures':
-      '1': 'string.quoted.double.continuum'
-      '2': 'string.quoted.single.continuum'
-    'match': '^[^-=+](.+:)(.*)'
+      '1':
+        'name': 'string.quoted.double.continuum'
+      '2':
+        'name': 'none'
+    'match': '^([^-=+].+:)(.*)'
   }
   { #Match PSA ticket numbers
     'match': '\\bT[0-9]{8}\.[0-9]{4}'

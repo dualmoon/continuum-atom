@@ -6,6 +6,11 @@ module.exports = AtomContinuum =
   modalPanel: null
   subscriptions: null
 
+  config:
+    includeCompletionsFromAllBuffers:
+      type: 'boolean'
+      default: false
+
   activate: (state) ->
     @atomContinuumView = new AtomContinuumView(state.atomContinuumViewState)
     @modalPanel = atom.workspace.addModalPanel(item: @atomContinuumView.getElement(), visible: false)
