@@ -1,3 +1,6 @@
+## 0.0.11
+* Update regexp for template lines
+
 ## 0.0.10 - The great renamifying
 * Renamed a bunch of files to be more uniform
 
