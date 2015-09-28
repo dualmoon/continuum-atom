@@ -12,13 +12,20 @@
       LMI credentials: ${5:n/a}
       User credentials: ${6:n/a}
       Work remaining / next steps: ${7:n/a}
+      $8
     """
   'outbound email subject':
     'prefix': 'obes'
-    'body': 'Your Service Ticket ID # ${1:201515150009999}'
+    'body': """
+      Your Service Ticket ID # ${1:201515150009999}
+      $2
+    """
   't4 subject':
     'prefix': 't4s'
-    'body': '${1:«continuum ticket id»} - ${1:«psa ticket id»} - ${1«site name»}'
+    'body': """
+      ${1:«continuum ticket id»} - ${2:«psa ticket id»} - ${3:«site name»}
+      $4
+    """
   't4 escalation':
     'prefix': 't4'
     'body': """
@@ -28,7 +35,8 @@
       	• Issue: $4
       	• Tier 4 Ticket number: $5
       	• Escalation Reason: $6
-      """
+        $7
+    """
   't3 performance malware virus scan':
     'prefix': 't3scan'
     'body': """
@@ -44,6 +52,7 @@
       - Please perform Disk Defragmenter scan
       - Please check hard drive SMART status with Disk Checkup
       - Please open MSConfig and disable unneeded applications
+
     """
   'team lead escalation stamp':
     'prefix': 'tlstamp'
@@ -55,6 +64,7 @@
       Have you verified all resources have been checked? $3
 
       Reason/Explanation: $4
+      $5
     """
   'no contact email':
     'prefix': 'nce'
@@ -62,4 +72,5 @@
       Hello ${1:username},
 
       We received a request/notification that you are experiencing ${2:issue} with ${3:issue}. Unfortunately, we have been unable to reach you by phone. If you're still having trouble with this issue, please call us back at ${4:number} at your earliest convenience. If the issue has been resolved, no action is required, and the ticket will automatically close on the next business day.
+      $5
     """

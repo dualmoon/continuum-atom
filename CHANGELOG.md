@@ -1,3 +1,6 @@
+## 0.0.12
+* Add additional tabstops to end of each template
+
 ## 0.0.11
 * Update regexp for template lines
 

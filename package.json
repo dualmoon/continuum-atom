@@ -1,7 +1,7 @@
 {
   "name": "continuum-atom",
   "main": "./lib/continuum-atom",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Atom package for Continuum tickets",
   "keywords": [
   ],
