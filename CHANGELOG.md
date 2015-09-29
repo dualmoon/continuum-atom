@@ -1,3 +1,6 @@
+## 0.0.13
+* Add chat tech snippets
+
 ## 0.0.12
 * Add additional tabstops to end of each template
 
