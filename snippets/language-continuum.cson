@@ -2,17 +2,18 @@
   't1 t2 t3 escalation':
     'prefix': 'te'
     'body': """
-      [PARTNER NOTES]
-      Work completed / steps taken: ${1:n/a}
+      «PARTNER NOTES»
+      Steps taken: ${1:n/a}
+      Timeframe for work: ${2:n/a}
 
-      [INTERNAL NOTES]
-      Issue: ${2:n/a}
-      Timeframe for work: ${3:n/a}
-      Resource(s) to be worked: ${4:n/a}
-      LMI credentials: ${5:n/a}
-      User credentials: ${6:n/a}
-      Work remaining / next steps: ${7:n/a}
-      $8
+      «INTERNAL NOTES»
+      Issue: ${3:n/a}
+      Timeframe for work: ${4:n/a}
+      Resource(s) to be worked: ${5:n/a}
+      LMI credentials: ${6:n/a}
+      User credentials: ${7:n/a}
+      Work remaining / next steps: ${8:n/a}
+      $9
     """
   'outbound email subject':
     'prefix': 'obes'
@@ -23,15 +24,15 @@
   't4 subject':
     'prefix': 't4s'
     'body': """
-      ${1:«continuum ticket id»} - ${2:«psa ticket id»} - ${3:«site name»}
-      $4
+      Your Service Ticket ID # ${1:«Continuum Ticket ID»} ${2:«SR Number»} ${3:«Contact Name»} ${4:«Site Name»} ${5:«Ticket Subject Line»}
+      $6
     """
   't4 escalation':
     'prefix': 't4'
     'body': """
       	• Site: $1
       	• Point of Contact: $2
-      	• Phone Number: $3
+      	• Callback Number: $3
       	• Issue: $4
       	• Tier 4 Ticket number: $5
       	• Escalation Reason: $6
