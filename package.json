@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "comtinuum-atom:toggle"
   },
-  "repository": "",
+  "repository": "https://github.com/dualmoon/continuum-atom.git",
   "license": "none",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
