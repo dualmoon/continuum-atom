@@ -34,11 +34,10 @@
       	• Site: $1
       	• Point of Contact: $2
       	• Callback Number: $3
-        • Resource: $4
+      	• Resource: $4
       	• Issue: $5
       	• Tier 4 Ticket number: $6
-      	• Escalation Reason: $7
-        $8"""
+      	• Escalation Reason: $7\n$8"""
   #template for escalating to Tier 2
   't2 escalation':
     'prefix': 't2'
