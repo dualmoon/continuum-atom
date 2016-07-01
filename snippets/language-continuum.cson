@@ -1,5 +1,6 @@
 '.text.continuum':
-  't1 t2 t3 escalation':
+  #template for Tier 1 follow up and Tier 3 escalation
+  't1 & t3 escalation':
     'prefix': 'te'
     'body': """
       «PARTNER NOTES»
@@ -13,48 +14,50 @@
       LMI credentials: ${6:n/a}
       User credentials: ${7:n/a}
       Work remaining / next steps: ${8:n/a}
-      $9
-    """
+      $9"""
+  #template for outbound email subject lines
   'outbound email subject':
     'prefix': 'obes'
     'body': """
       Your Service Ticket ID # ${1:201515150009999}
-      $2
-    """
+      $2"""
+  #template for outbound email escalations to Tier 4
   't4 subject':
     'prefix': 't4s'
     'body': """
       Your Service Ticket ID # ${1:«Continuum Ticket ID»} ${2:«SR Number»} ${3:«Contact Name»} ${4:«Site Name»} ${5:«Ticket Subject Line»}
-      $6
-    """
+      $6"""
+  #template for Tier 4 ticket only and email body escalations
   't4 escalation':
     'prefix': 't4'
     'body': """
       	• Site: $1
       	• Point of Contact: $2
       	• Callback Number: $3
-      	• Issue: $4
-      	• Tier 4 Ticket number: $5
-      	• Escalation Reason: $6
-        $7
-    """
-  't3 performance malware virus scan':
-    'prefix': 't3scan'
+        • Resource: $4
+      	• Issue: $5
+      	• Tier 4 Ticket number: $6
+      	• Escalation Reason: $7
+        $8"""
+  #template for escalating to Tier 2
+  't2 escalation':
+    'prefix': 't2'
     'body': """
-      - Please perform full Anti-Virus scan
-      - Please perform MalwareBytes Threat scan
-      - Please perform CCleaner scan and clean up
-      - Please perform HitmanPro scan
-      - Please perform RogueKiller scan
-      - Please perform ADWCleaner scan
-      - Please perform Webroot scan
-      - Please open command prompt and run "sfc /scannow"
-      - Please perform Disk Cleanup
-      - Please perform Disk Defragmenter scan
-      - Please check hard drive SMART status with Disk Checkup
-      - Please open MSConfig and disable unneeded applications
+      «PARTNER NOTES»
+      Steps taken: ${1:n/a}
+      Timeframe for work: ${2:n/a}
 
-    """
+      «INTERNAL NOTES»
+      Issue: ${3:n/a}
+      Timeframe for work: ${4:n/a}
+      Resource(s) to be worked: ${5:n/a}
+      LMI credentials: ${6:n/a}
+      User: ${7:n/a}
+      User callback: ${8:n/a}
+      User credentials: ${9:n/a}
+      Work remaining / next steps: ${10:n/a}
+      $11"""
+  #template for team lead stamp on escalation requests
   'team lead escalation stamp':
     'prefix': 'tlstamp'
     'body': """
@@ -65,25 +68,24 @@
       Have you verified all resources have been checked? $3
 
       Reason/Explanation: $4
-      $5
-    """
+      $5"""
+  #template for No Contact emails
   'no contact email':
     'prefix': 'nce'
     'body': """
       Hello ${1:username},
 
       We received a request/notification that you are experiencing ${2:issue} with ${3:issue}. Unfortunately, we have been unable to reach you by phone. If you're still having trouble with this issue, please call us back at ${4:number} at your earliest convenience. If the issue has been resolved, no action is required, and the ticket will automatically close on the next business day.
-      $5
-    """
+      $5"""
+  #standard chat tech opening template
   'chat greeting':
     'prefix': 'co'
     'body': """
       Thank you for contacting ${1:«partner»} Technical Support, my name is ${2:«name»}. How can I help you?
-      $3
-    """
+      $3"""
+  #standard chat tech wrap-up template
   'chat wrapup':
     'prefix': 'cw'
     'body': """
-      Your ticket number is ${1«PSA or ticket id»}. Is there anything else that I may assist you with?
-      $2
-    """
+      Your ticket number is ${1«PSA or ticket id»}. Let us know if there's anything else we can help you with!
+      $2"""
